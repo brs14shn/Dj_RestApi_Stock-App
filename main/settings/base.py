@@ -47,10 +47,10 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     #'debug_toolbar',
     'dj_rest_auth',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'dj_rest_auth.registration',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    # 'dj_rest_auth.registration',
     
     # MyApps
     "users",
