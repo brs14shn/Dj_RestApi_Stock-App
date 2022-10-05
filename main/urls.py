@@ -32,5 +32,6 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
 
     #! My apps
-    path("users/",include("users.urls"))
+    path("users/",include("users.urls")),
+    path("stock/",include("stock.urls"))
 ]
