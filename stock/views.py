@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from rest_framework.permissions import IsAuthenticated
 
 from .models import (
     Category,
@@ -10,6 +10,11 @@ from .models import (
 from .serializers import (
     CategorySerializers,
     BrandSerializers,
+    ProductSerializers,
+    FirmSerializers,
+    StockSerializers,
+    
+
 )
 
 from rest_framework import generics 
@@ -29,3 +34,16 @@ class CategoryURD(generics.RetrieveUpdateDestroyAPIView):
 class BrandViewSet(ModelViewSet):
      queryset=Brand.objects.all()
      serializer_class=BrandSerializers
+
+class ProductViewSet(ModelViewSet):
+    queryset=Product.objects.all()
+    serializer_class=ProductSerializers
+
+class FirmViewSet(ModelViewSet):
+    queryset=Firm.objects.all()
+    serializer_class=FirmSerializers
+
+class StockViewSet(ModelViewSet):
+    queryset=Stock.objects.all()
+    serializer_class=StockSerializers
+    # permission_classes = [IsAuthenticated]
