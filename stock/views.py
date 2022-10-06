@@ -1,4 +1,4 @@
-# from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated,DjangoModelPermissionsOrAnonReadOnly
 
 from .models import (
     Category,
@@ -46,4 +46,4 @@ class FirmViewSet(ModelViewSet):
 class StockViewSet(ModelViewSet):
     queryset=Stock.objects.all()
     serializer_class=StockSerializers
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,DjangoModelPermissionsOrAnonReadOnly]
